@@ -1,0 +1,50 @@
+{% extends 'dashboard.html' %}
+
+{% block body %}
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="{{url_for('static',filename='css/style.css')}}">
+    
+    <title>Blog Write - Visper</title>
+  </head>
+
+
+
+             
+
+    <div class="container innersection">
+      <div class="row d-flex flex-column">
+        <h2>Choose Blog Title to Continue Writing!</h2>
+        <div class="">
+          <table class="table table-bordered">
+            <thead>
+              <tr>
+                <th>Blog Topic</th>
+                <th>Save for Later</th>
+                <th>Continue</th>
+              </tr>
+            </thead>
+            <tbody>
+              {% for blog in show_idea %}
+              <tr>
+                <td class="title-s">{{ blog }}</td>
+                <td><button class="btn"><a href="{{ blog }}">Save for Later</a> </button></td>
+                <td><button class="btn btn-primary">Continue</button></td>
+              </tr>
+              {% endfor %}
+            </tbody>
+          </table>
+           
+        </div>
+        
+      </div>
+        
+        
+        
+    </div>
+  
+
+{% endblock %}
+

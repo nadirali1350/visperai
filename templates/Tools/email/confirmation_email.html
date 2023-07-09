@@ -1,0 +1,79 @@
+{% extends 'dashboard.html' %}
+
+{% block body %}
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="stylesheet" href="{{url_for('static',filename='css/style.css')}}">
+  <!-- ckEditor -->
+  <script src="https://cdn.ckeditor.com/ckeditor5/35.3.2/classic/ckeditor.js"></script>
+  <title>Confirmation EMAIL WRITER - Visper</title>
+</head>
+
+
+<div class="col-md-12">
+
+  <div class="col-md-12 tool-lebal">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="" style="border: 1px solid #00000026;
+        margin-bottom: 50px;">
+          <div class="card-body">
+            <h4 class="" style="margin:0;">Confirmation EMAIL WRITER</h4>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>          
+<div class="container">
+  
+  <div class="row">
+    <div class="col-md-4">
+      <form action="" method="post">
+
+        <div class="d-flex flex-column">
+          <label  for="details"><h5 class="mytitle mt-3" >Explain Email Purpose</h5></label>
+          <input type="text" class="form-control" id="details" name="q2" aria-describedby="sthelp" placeholder="Enter Explanation...">
+          <div id="sthelp" class="form-text text-muted my-3">Try to explain the purpose briefly... 
+            <br>
+            1.  "Signing Up for the web app"
+           </div>
+        </div>
+        <button type="submit" style="    padding: 10px 20px;
+        width: 100%;
+        border-radius: 5px;" class="btn btn-primary">Create Content</button>
+      </form>
+      
+    </div>
+    <div class="col-md-8">
+      <div class="d-flex flex-column">
+        <label for="editor"><h5 class="mytitle">Results</h5></label>
+        <textarea class="form-control" id="editor" rows="20" placeholder="Product description will be here!">{{show_answer}}</textarea>
+      </div>
+    </div>
+  </div>
+  <script>
+    ClassicEditor
+            .create( document.querySelector( '#editor' ) )
+            .then( editor => {
+                    console.log( editor );
+            } )
+            .catch( error => {
+                    console.error( error );
+            } );
+  </script>
+    
+    
+    
+</div>
+
+</div>
+  
+
+
+
+
+
+{% endblock %}
+

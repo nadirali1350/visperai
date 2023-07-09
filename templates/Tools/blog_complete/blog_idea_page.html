@@ -1,0 +1,49 @@
+{% extends 'dashboard.html' %}
+
+{% block body %}
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="{{url_for('static',filename='css/style.css')}}">
+    <!-- Bootstrap CSS -->
+   
+
+    <title>Blog Write - Visper</title>
+  </head>
+
+
+
+             
+<div class="container innersection">
+  <div class="row">
+    <div class="col-md-6 p-3 t-aria">
+      <form action="/blog_idea" method="post">
+
+        <div class="d-flex flex-column">
+          <label  for="statment"><h2 class="mytitle" >Write keyword to generate ideas: </h2></label>
+          <input type="text" class="form-control" id="statment" name="statment" aria-describedby="sthelp" placeholder="Enter Topic!">
+          <div id="sthelp" class="form-text text-muted my-3">Try to explain in steps Like: <br>1. how to make coffee
+            <br>2. What is A.I
+            <br>3. learn to make website </div>
+        </div>
+        <button type="submit" style="    padding: 10px 20px;
+        width: 100%;
+        border-radius: 5px;" class="btn btn-primary">Create Content</button>
+      </form>
+    </div>
+    <div class="col-md-6 p-3">
+      <img class="img-fluid rounded" src="{{url_for('static',filename='img/back-robot.jpg')}}" alt="">
+    </div>
+  </div>
+    
+    
+    
+</div>
+
+
+
+
+
+{% endblock %}
+
