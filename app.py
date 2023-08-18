@@ -10,7 +10,7 @@ import vispertools, ask, old_blog_post_gen
 app = Flask(__name__, static_url_path='/static')
 app.secret_key = 'super secret key'
 
-client = MongoClient('mongodb+srv://nadirali1350:2Ze11yCr3qjfbdk3@visper.to6xfxz.mongodb.net/')
+client = MongoClient('Mongo db uri')
 db = client.vispdb
 users = db.users
 
